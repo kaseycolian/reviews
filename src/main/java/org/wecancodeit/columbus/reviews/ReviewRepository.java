@@ -14,30 +14,31 @@ public class ReviewRepository {
 	public ReviewRepository() {
 		Review godspeedYou = new Review(1997L, "Godspeed You Black Emporer", "http://cstrecords.com/gybe/", "Music",
 				"Experimental Band", "Amazing");
+		Review boardsOfCanada = new Review(1986L, "Boards of Canada",
+				"https://i.ytimg.com/vi/nSGIX0U8myU/maxresdefault.jpg", "Music", "Experimental Music", "Chill");
+		Review aphexTwin = new Review(1991L, "Aphex Twin", "http://whpuxin.com/data/out/10/IMG_464988.jpg", "Music",
+				"Experimental Music", "Driving");
 
 		reviews.put(godspeedYou.getProductId(), godspeedYou);
+		reviews.put(boardsOfCanada.getProductId(), boardsOfCanada);
+		reviews.put(aphexTwin.getProductId(), aphexTwin);
 	}
 
 	public ReviewRepository(Review... reviews) {
 		populateReviewsMap(reviews);
-
 	}
-public void populateReviewsMap(Review...reviews) {
-	for (Review review: reviews);
-	this.reviews.put(review.getProductId, review);
-}
-	
-	// public ReviewRepository(Review firstProduct) {
-	//
-	// }
 
-	public Review findOne(Long firstProductId) {
+	private void populateReviewsMap(Review... reviews) {
+		for (Review review : reviews) {
+			this.reviews.put(review.getProductId(), review);
+		}
+	}
 
-		return reviews.get(firstProductId);
+	public Review findOne(Long productId) {
+		return reviews.get(productId);
 	}
 
 	public Collection<Review> findAll() {
-
 		return reviews.values();
 	}
 
