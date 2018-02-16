@@ -1,23 +1,33 @@
 package org.wecancodeit.columbus.reviews;
 
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.Collection;
 
 import org.junit.Test;
 
 public class ReviewRepositoryTest {
 	private ReviewRepository underTest;
 	
-	private long firstProductId = 123;
-	private Review firstProduct = new Review (firstProductId, "g2", "www.g2.com", "black pen", "inkers", "gelly");
-	
-	@Test
-	public void shouldFindFirstReview() {
-		underTest = new ReviewRepository (firstProduct);
-		Review result = underTest.findOne(firstProductId);
-		assertThat (result, is(firstProduct));
-	}
+	private long firstReviewId = 123;
+	private Review firstReview = new Review (firstReviewId, "g2", "www.g2.com", "black pen", "inkers", "gelly");
+	private long secondReviewId = 456;
+	private Review secondReview = new Review (secondReviewId, "g6", "www.g6.com", "blue", "fly", "likeaG6");
+//	@Test
+//	public void shouldFindFirstReview() {
+//		underTest = new ReviewRepository (firstReview);
+//		Review result = underTest.findOne(firstReviewId);
+//		assertThat (result, is("cat"));
+//	}
 
+	@Test
+	public void shouldFindAll() {
+		underTest = new ReviewRepository (firstReview, secondReview);
+		Collection<Review> result = underTest.findAll();
+		assertThat(result, containsInAnyOrder(firstReview, secondReview));
 	
+	}
 	
 }

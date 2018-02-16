@@ -1,5 +1,6 @@
 package org.wecancodeit.columbus.reviews;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,13 +18,27 @@ public class ReviewRepository {
 		reviews.put(godspeedYou.getProductId(), godspeedYou);
 	}
 
-	public ReviewRepository(Review firstProduct) {
+	public ReviewRepository(Review... reviews) {
+		populateReviewsMap(reviews);
 
 	}
+public void populateReviewsMap(Review...reviews) {
+	for (Review review: reviews);
+	this.reviews.put(review.getProductId, review);
+}
+	
+	// public ReviewRepository(Review firstProduct) {
+	//
+	// }
 
- public Review findOne(long firstProductId) {
+	public Review findOne(Long firstProductId) {
 
-return reviews.get(productId);
- }
+		return reviews.get(firstProductId);
+	}
+
+	public Collection<Review> findAll() {
+
+		return reviews.values();
+	}
 
 }
