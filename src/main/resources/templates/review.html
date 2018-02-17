@@ -2,22 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
+<!-- <meta charset="ISO-8859-1"> -->
 <title>Artist</title>
 
 </head>
 
 <body>
 	<header>
-		<h1 th:each="review: ${reviews}"
-			th:text="'Artist: ' + ${review.title}" />
+		<h1 th:each="review: ${reviews}" th:text="${review.title}" />
 	</header>
 
 	<div th:each="review: ${reviews}">
 		<h2 th:text="'Genre: ' + ${review.category}" />
 		<h4
 			th:text="'Year of first studio release: ' + ${review.firstRelease}" />
-		<h4 th:text ="'Year of last studio release: ' + ${review.lastRelease}"	/>
+		<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
 		<br></br>
 		<Section>
 			<h2>Stuff you should know...</h2>
