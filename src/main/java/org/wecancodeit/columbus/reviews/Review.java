@@ -7,14 +7,21 @@ public class Review {
 	private String category;
 	private String content;
 	private String firstRelease;
+	private String lastRelease;
 
-	public Review(Long productId, String title, String imageUrl, String category, String content, String firstRelease) {
+	public Review(Long productId, String title, String imageUrl, String category, String content, String firstRelease,
+			String lastRelease) {
 		this.productId = productId;
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.content = content;
 		this.firstRelease = firstRelease;
+		this.lastRelease = lastRelease;
+	}
+
+	public String getLastRelease() {
+		return lastRelease;
 	}
 
 	public Long getProductId() {

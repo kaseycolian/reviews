@@ -15,12 +15,13 @@
 
 	<div th:each="review: ${reviews}">
 		<h2 th:text="'Genre: ' + ${review.category}" />
-		<h4 th:text="'Year of first studio release: ' + ${review.firstRelease}" />
-	<br></br>
+		<h4
+			th:text="'Year of first studio release: ' + ${review.firstRelease}" />
+		<h4 th:text ="'Year of last studio release: ' + ${review.lastRelease}"	/>
+		<br></br>
 		<Section>
 			<h2>Stuff you should know...</h2>
-			<p th:each="review: ${reviews}"
-			 th:text="${review.content}" />
+			<p th:each="review: ${reviews}" th:text="${review.content}" />
 		</Section>
 
 
