@@ -16,7 +16,7 @@
 	<ul th:each="review: ${reviews}">
 		<li><a th:href="@{/review(id=${review.productId})}"
 			th:text="${review.title}" /> <span
-			th:text="': ' + ${review.description}" /></li>
+			th:text="': ' + ${review.firstRelease}" /></li>
 	</ul>
 	<img src="./static/images/piano.jpeg" alt="Piano Keys" />
 
