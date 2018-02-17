@@ -6,15 +6,15 @@ public class Review {
 	private String imageUrl;
 	private String category;
 	private String content;
-	private String description;
+	private String firstRelease;
 
-	public Review(Long productId, String title, String imageUrl, String category, String content, String description) {
+	public Review(Long productId, String title, String imageUrl, String category, String content, String firstRelease) {
 		this.productId = productId;
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.content = content;
-		this.description = description;
+		this.firstRelease = firstRelease;
 	}
 
 	public Long getProductId() {
@@ -38,7 +38,7 @@ public class Review {
 	}
 
 	public String getDescription() {
-		return description;
+		return firstRelease;
 	}
 
 }
