@@ -37,7 +37,7 @@ public class Review {
 		return content;
 	}
 
-	public String getDescription() {
+	public String getFirstRelease() {
 		return firstRelease;
 	}
 

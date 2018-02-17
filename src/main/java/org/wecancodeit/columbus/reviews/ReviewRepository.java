@@ -13,10 +13,10 @@ public class ReviewRepository {
 
 	public ReviewRepository() {
 		Review godspeedYou = new Review(1997L, "Godspeed You Black Emporer",
-				"./static/images/godspeedYou!BlackEmporer.jpg", "Music", "Experimental Band", "1997");
+				"../static/images/godspeedYou!BlackEmporer.jpg", "Music", "Experimental Band", "1997");
 		Review boardsOfCanada = new Review(1986L, "Boards of Canada", "./static/images/boardsOfCanada.jpg", "Music",
 				"Experimental Music", "1995");
-		Review aphexTwin = new Review(1991L, "Aphex Twin", "./static/images/aphexTwin.jpg", "1991",
+		Review aphexTwin = new Review(1991L, "Aphex Twin", "../static/images/aphexTwin.jpg", "1991",
 				"Experimental Music", "Driving");
 
 		reviews.put(godspeedYou.getProductId(), godspeedYou);

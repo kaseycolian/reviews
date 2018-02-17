@@ -42,7 +42,7 @@ public class ReviewTest {
 
 	@Test
 	public void shoulReturnDescription() {
-		String description = underTest.getDescription();
+		String description = underTest.getFirstRelease();
 		assertThat(description, is("gelpen"));
 	}
 }
