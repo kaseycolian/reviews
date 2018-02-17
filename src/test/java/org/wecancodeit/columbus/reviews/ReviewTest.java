@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class ReviewTest {
 
-	Review underTest = new Review(1234L, "pen", "www.url.com", "pointy", "ink", "gelpen");
+	Review underTest = new Review(1234L, "pen", "www.url.com", "pointy", "ink", "gelpen", "meow");
 
 	@Test
 	public void shouldReturnId() {
@@ -41,8 +41,14 @@ public class ReviewTest {
 	}
 
 	@Test
-	public void shoulReturnDescription() {
+	public void shoulReturnFirstRelease() {
 		String description = underTest.getFirstRelease();
 		assertThat(description, is("gelpen"));
+	}
+
+	@Test
+	public void shouldReturnLastRelease() {
+		String release = underTest.getLastRelease();
+		assertThat(release, is("meow"));
 	}
 }
