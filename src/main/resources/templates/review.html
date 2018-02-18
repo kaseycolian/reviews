@@ -26,7 +26,7 @@ body {
 			<h2>Stuff you should know...</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 		</Section>
-		<p th:text="${image.description}"></p>
+		
 		<img th:src="${review.imageUrl}" />
 		
 	</div>
