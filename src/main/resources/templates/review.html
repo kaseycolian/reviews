@@ -10,8 +10,8 @@ body {
 
 img {
 	display: block;
-	max-width: 685px;
-	max-height: 300px;
+	max-width: 500px;
+	max-height: 260px;
 	width: auto;
 	height: auto;
 }
@@ -47,7 +47,7 @@ a:hover {
 			<img th:src="${review.imageUrl}" alt="Band logo" />
 		</Figure>
 		<br></br>
-		<Article>
+		<Section>
 			<h2>Behind the music:</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 			<sub><a th:each="review: ${reviews}"
@@ -55,7 +55,7 @@ a:hover {
 
 			<iframe width="420" height="315" th:each="review: ${reviews}"
 				th:src="${review.youTubeUrl}"> </iframe>
-		</Article>
+		</Section>
 	</div>
 </body>
 <footer>
