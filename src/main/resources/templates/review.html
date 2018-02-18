@@ -4,10 +4,11 @@
 
 <head>
 <style>
-body{ background-color: #C4C4C4;}
-
+body {
+	background-color: #C4C4C4;
+}
 </style>
-<title th:each="review: ${reviews}" th:text="${review.title}" /> 
+<title th:each="review: ${reviews}" th:text="${review.title}" />
 </head>
 
 <body>
@@ -17,17 +18,17 @@ body{ background-color: #C4C4C4;}
 
 	<div th:each="review: ${reviews}">
 		<em><h2 th:text="'Genre: ' + ${review.category}" /></em>
-		<h4 th:text="'Year of first studio release: ' + ${review.firstRelease}" />
+		<h4	th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 		<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
 		<br></br>
+
 		<Section>
 			<h2>Stuff you should know...</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 		</Section>
-
-		<img src="${review.imageUrl}" /> 
+		<p th:text="${image.description}"></p>
+		<img th:src="${review.imageUrl}" />
 		
-
 	</div>
 
 </body>
