@@ -1,0 +1,28 @@
+body {
+	background-color: #BABABA;
+}
+
+img {
+	position: absolute;
+	top: 125px;
+	left: 280px;
+	display: block;
+	max-width: 450px;
+	max-height: 210px;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+/*unvisited link*/
+a:link {
+	color: white;
+}
+/* visited link*/
+a:visited {
+	color: #1287A8;
+}
+/* mouse over link*/
+a:hover {
+	color: #DB1291;
+}

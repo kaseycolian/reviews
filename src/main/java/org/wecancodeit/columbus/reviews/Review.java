@@ -11,7 +11,6 @@ public class Review {
 	private String lastRelease;
 	private String youTubeUrl;
 
-
 	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl,
 			String firstRelease, String lastRelease, String youTubeUrl) {
 		this.productId = productId;

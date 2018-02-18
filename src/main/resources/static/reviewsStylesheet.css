@@ -1,0 +1,31 @@
+body {
+	background-color: #4A4A4A;
+}
+
+header {
+	color: #1287A8;
+}
+
+li {
+	color: #DB1291;
+}
+
+img {
+	display: block;
+	max-width: 864px;
+	max-height: 540px;
+	width: auto;
+	height: auto;
+}
+/*unvisited link*/
+a:link {
+	color: white;
+}
+/* visited link*/
+a:visited {
+	color: #B4D9E6;
+}
+/* mouse over link*/
+a:hover {
+	color: #DB1291;
+}

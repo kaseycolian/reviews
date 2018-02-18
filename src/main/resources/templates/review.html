@@ -3,36 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<style>
-body {
-	background-color: #BABABA;
-}
-
-img {
-	position: absolute;
-	top: 125px;
-	left: 280px;
-	display: block;
-	max-width: 450px;
-	max-height: 210px;
-	width: auto;
-	height: auto;
-	display: block;
-}
-
-/*unvisited link*/
-a:link {
-	color: white;
-}
-/* visited link*/
-a:visited {
-	color: #1287A8;
-}
-/* mouse over link*/
-a:hover {
-	color: #DB1291;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="./reviewStylesheet.css" />
 <title th:each="review: ${reviews}" th:text="${review.title}" />
 </head>
 
@@ -52,8 +23,8 @@ a:hover {
 				<p th:each="review: ${reviews}" />
 				<img th:src="${review.imageUrl}" alt="Band logo" />
 			</Figure>
+			<br></br> <br></br> <br></br> <br></br> <br></br>
 		</Section>
-		<br></br> <br></br> <br></br> <br></br> <br></br>
 		<Article>
 			<h2>Behind the music:</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
