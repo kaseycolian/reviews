@@ -3,6 +3,8 @@ package org.wecancodeit.columbus.reviews;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.awt.List;
+
 import org.junit.Test;
 
 public class ReviewTest {
@@ -57,7 +59,7 @@ public class ReviewTest {
 		String footnote = underTest.getFootnoteUrl();
 		assertThat(footnote, is("gelpen"));
 	}
-	
+
 	@Test
 	public void shouldReturnYouTubeVideo() {
 		String tube = underTest.getYouTubeUrl();

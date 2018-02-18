@@ -1,6 +1,12 @@
+header{
+font-family: "Constantia", serif;
+
+}
 body {
 	background-color: #BABABA;
+	font-family: "Calibri", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
+
 
 img {
 	position: absolute;
@@ -12,6 +18,9 @@ img {
 	width: auto;
 	height: auto;
 	display: block;
+}
+footer{
+	font-family: "Cambria", Georgia, serif;
 }
 
 /*unvisited link*/
