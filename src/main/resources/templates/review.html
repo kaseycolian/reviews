@@ -11,14 +11,12 @@
 	<header>
 		<h1 th:each="review: ${reviews}" th:text="${review.title}" />
 	</header>
-
 	<div>
 		<Section th:each="review: ${reviews}">
-			<em><h3 th:text="'Genre: ' + ${review.category}" /></em>
+			<h3 th:text="'Genre: ' + ${review.category}" />
 			<h4
 				th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 			<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
-
 			<Figure>
 				<p th:each="review: ${reviews}" />
 				<img th:src="${review.imageUrl}" alt="Band logo" />

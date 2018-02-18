@@ -6,25 +6,26 @@
 <link rel="stylesheet" type="text/css" href="./reviewsStylesheet.css" />
 </head>
 
-<title>Music Reviews</title>
+<title>Musical Reviews</title>
 
 
 <body>
 	<header>
-		<h1>Music Reviews</h1>
+		<h1>Musical Artist Reviews</h1>
+		<h2>Beats to help increase focus:</h2>
 	</header>
 
+	<Section>
+		<h3>
+			<ul th:each="review: ${reviews}">
+				<em><li><a th:href="@{/review(id=${review.productId})}"
+						th:text="${review.title}" /></li></em>
+			</ul>
+		</h3>
+		<figure>
 
-	<h3>
-		<ul th:each="review: ${reviews}">
-			<em><li><a th:href="@{/review(id=${review.productId})}"
-					th:text="${review.title}" /></li></em>
-		</ul>
-	</h3>
-	<figure>
-
-		<img src="./images/keys.jpg" alt="Piano Keys" />
-	</figure>
-
+			<img src="./images/keys.jpg" alt="Piano Keys" />
+		</figure>
+	</Section>
 </body>
 </html>

@@ -14,7 +14,7 @@ public class Review {
 	private String lastRelease;
 	private String youTubeUrl;
 
-//	private ArrayList<Review> relatedTags = new ArrayList<Review>();
+	// private ArrayList<Review> relatedTags = new ArrayList<Review>();
 
 	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl,
 			String firstRelease, String lastRelease, String youTubeUrl) {
@@ -27,8 +27,8 @@ public class Review {
 		this.firstRelease = firstRelease;
 		this.lastRelease = lastRelease;
 		this.youTubeUrl = youTubeUrl;
-//		this.relatedTags = (ArrayList<String>) relatedTags;
-//		relatedTags.add(this.relatedTags);
+		// this.relatedTags = (ArrayList<String>) relatedTags;
+		// relatedTags.add(this.relatedTags);
 	}
 
 	public String getLastRelease() {
@@ -67,7 +67,7 @@ public class Review {
 		return youTubeUrl;
 	}
 
-//	public List<String> getRelatedTags() {
-//		return relatedTags;
-//	}
+	// public List<String> getRelatedTags() {
+	// return relatedTags;
+	// }
 }

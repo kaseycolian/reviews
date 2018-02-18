@@ -1,12 +1,16 @@
 header{
-font-family: "Constantia", serif;
-
+	font-family: "Constantia", serif;
+	color: #262D40;
 }
+
 body {
 	background-color: #BABABA;
 	font-family: "Calibri", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+h3{
+	font-style: italic;
+}
 
 img {
 	position: absolute;
@@ -19,6 +23,7 @@ img {
 	height: auto;
 	display: block;
 }
+
 footer{
 	font-family: "Cambria", Georgia, serif;
 }
@@ -29,7 +34,7 @@ a:link {
 }
 /* visited link*/
 a:visited {
-	color: #1287A8;
+	color:  #262D40;
 }
 /* mouse over link*/
 a:hover {
