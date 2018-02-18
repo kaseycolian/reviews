@@ -7,8 +7,9 @@
 body {
 	background-color: #4A4A4A;
 }
+
 header {
-color: #1287A8;
+	color: #1287A8;
 }
 
 li {
@@ -21,7 +22,7 @@ a:link {
 }
 /* visited link*/
 a:visited {
-	color: white;
+	color: #B4D9E6;
 }
 /* mouse over link*/
 a:hover {
@@ -39,16 +40,17 @@ a:hover {
 	</header>
 
 
-	<h3><ul th:each="review: ${reviews}">
-		<em><li><a th:href="@{/review(id=${review.productId})}"
-			th:text="${review.title}" /></li></em>
-	</ul></h3>
+	<h3>
+		<ul th:each="review: ${reviews}">
+			<em><li><a th:href="@{/review(id=${review.productId})}"
+					th:text="${review.title}" /></li></em>
+		</ul>
+	</h3>
 	<div>
 
-		<img th:src="@{./static/piano.jpeg}"
-			src="../static/piano.jpeg"
-			alt="Responsive image" /> <img
-			src="../static/piano.jpeg" alt="Piano Keys" />
+		<img th:src="@{./static/piano.jpeg}" src="../static/piano.jpeg"
+			alt="Responsive image" /> <img src="../static/piano.jpeg"
+			alt="Piano Keys" />
 	</div>
 
 </body>

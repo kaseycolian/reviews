@@ -7,6 +7,27 @@
 body {
 	background-color: #C4C4C4;
 }
+
+img {
+	display: block;
+	max-width: 685px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+}
+
+/*unvisited link*/
+a:link {
+	color: white;
+}
+/* visited link*/
+a:visited {
+	color: #1287A8;
+}
+/* mouse over link*/
+a:hover {
+	color: #DB1291;
+}
 </style>
 <title th:each="review: ${reviews}" th:text="${review.title}" />
 </head>
@@ -18,7 +39,8 @@ body {
 
 	<div th:each="review: ${reviews}">
 		<em><h2 th:text="'Genre: ' + ${review.category}" /></em>
-		<h4	th:text="'Year of first studio release: ' + ${review.firstRelease}" />
+		<h4
+			th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 		<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
 		<br></br>
 
@@ -27,12 +49,15 @@ body {
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 		</Section>
 		
-		<img th:src="${review.imageUrl}" />
+		<p th:each="review: ${reviews}" />
+		<img th:src="${review.imageUrl}" /> 
 		
+		<br></br>
 	</div>
 
 </body>
 <footer>
+
 	<p th:each="review: ${reviews}" th:text="${review.footnoteUrl}" />
 	<a href="http://localhost:8080/reviews">Back to home</a>
 </footer>

@@ -11,8 +11,8 @@ public class Review {
 	private String firstRelease;
 	private String lastRelease;
 
-	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl, String firstRelease,
-			String lastRelease) {
+	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl,
+			String firstRelease, String lastRelease) {
 		this.productId = productId;
 		this.title = title;
 		this.imageUrl = imageUrl;

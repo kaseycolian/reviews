@@ -6,15 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 @Controller
-
 public class ReviewController {
-	
+
 	@Resource
 	ReviewRepository reviewRepo;
 
-	@RequestMapping(value="reviews")
+	@RequestMapping(value = "reviews")
 	public String getAllReviews(Model model) {
 		model.addAttribute("reviews", reviewRepo.findAll());
 		return "reviews";

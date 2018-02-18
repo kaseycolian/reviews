@@ -51,6 +51,7 @@ public class ReviewTest {
 		String release = underTest.getLastRelease();
 		assertThat(release, is("meow"));
 	}
+
 	@Test
 	public void shouldReturnFootnoteUrl() {
 		String footnote = underTest.getFootnoteUrl();
