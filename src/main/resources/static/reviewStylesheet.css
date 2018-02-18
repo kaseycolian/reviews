@@ -1,6 +1,7 @@
 header{
 	font-family: "Constantia", serif;
 	color: #262D40;
+	font-size: 120%;
 }
 
 body {
@@ -14,14 +15,22 @@ h3{
 
 img {
 	position: absolute;
-	top: 125px;
-	left: 280px;
+	top: 147px;
+	left: 270px;
 	display: block;
 	max-width: 450px;
 	max-height: 210px;
 	width: auto;
 	height: auto;
 	display: block;
+}
+
+iframe{
+	    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 420;
 }
 
 footer{
