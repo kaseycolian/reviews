@@ -15,17 +15,18 @@
 		<h2>Beats to help increase focus:</h2>
 	</header>
 
-	<Section>
-		<h3>
-			<ul th:each="review: ${reviews}">
-				<em><li><a th:href="@{/review(id=${review.productId})}"
-						th:text="${review.title}" /></li></em>
-			</ul>
-		</h3>
-		<figure>
-
-			<img src="./images/keys.jpg" alt="Piano Keys" />
-		</figure>
-	</Section>
+	<div class="container">
+		<Section>
+			<h3>
+				<ul th:each="review: ${reviews}">
+					<em><li><a th:href="@{/review(id=${review.productId})}"
+							th:text="${review.title}" /></li></em>
+				</ul>
+			</h3>
+			<figure>
+				<img src="./images/keys.jpg" alt="Piano Keys" />
+			</figure>
+		</Section>
+	</div>
 </body>
 </html>

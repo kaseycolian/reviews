@@ -11,18 +11,19 @@
 	<header>
 		<h1 th:each="review: ${reviews}" th:text="${review.title}" />
 	</header>
-	<div>
+	<div class="container">
 		<Section th:each="review: ${reviews}">
 			<h3 th:text="'Genre: ' + ${review.category}" />
 			<h4
 				th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 			<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
 
-			<iframe width="400" height="225" th:each="review: ${reviews}"
+			<iframe width="400" height="240" th:each="review: ${reviews}"
 				th:src="${review.youTubeUrl}"> </iframe>
 
 			<br></br> <br></br> <br></br> <br></br> <br></br>
 		</Section>
+
 		<Article th:each="review: ${reviews}">
 			<h2>Behind the music:</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
@@ -31,8 +32,6 @@
 
 			<p th:each="review: ${reviews}" />
 			<img th:src="${review.imageUrl}" alt="Band logo" />
-
-
 		</Article>
 	</div>
 </body>
