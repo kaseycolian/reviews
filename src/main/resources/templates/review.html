@@ -58,7 +58,9 @@ a:hover {
 </body>
 <footer>
 
-	<p th:each="review: ${reviews}" th:text="${review.footnoteUrl}" />
+	<a th:each="review: ${reviews}"  th:href="${review.footnoteUrl}" > [1] Reference Link</a>
+	
+	<br></br>	
 	<a href="http://localhost:8080/reviews">Back to home</a>
 </footer>
 </html>
