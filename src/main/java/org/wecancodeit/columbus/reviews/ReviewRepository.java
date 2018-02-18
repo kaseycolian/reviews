@@ -20,7 +20,7 @@ public class ReviewRepository {
 				"Laid back electronic music with an overall calming sound that still provides a nice melody to maintain focus.  According to Wikipedia: \"The music of Boards of Canada incorporates elements such as vintage analogue synthesisers, hip hop-inspired breakbeats, and samples from 1970s public broadcasting programmes and other outdated media; it has been described as exploring themes of nostalgia, childhood memory, and nature. In 2012, FACT called them 'one of the best-known and best-loved electronic acts of the last two decades.'\"[1]",
 				"https://en.wikipedia.org/wiki/Boards_of_Canada", "1995", "2013",
 				"https://www.youtube.com/embed/XaJn3QqiIUc");
-		Review aphexTwin = new Review(1991L, "Aphex Twin", "./images/aphexTwin.jpg", "Experimental Music",
+		Review aphexTwin = new Review(1991L, "Aphex Twin", "./images/aphexTwin.jpg", "Experimental Music, Ambient Techno, IDM",
 				"The sound of Aphex Twin is more intense, with a beat that can drive concentration.  According to Wikipedia: 'Richard David James (born 18 August 1971), best known by his recording alias Aphex Twin, is a Cornish (English) electronic musician, known for his influential and idiosyncratic work in styles such as ambient techno and IDM in the 1990s, for which he received widespread critical acclaim. He is also the co-founder of Rephlex Records with Grant Wilson-Claridge.'[1]",
 				"https://en.wikipedia.org/wiki/Aphex_Twin", "1991", "2014",
 				"https://www.youtube.com/embed/S5UBYOv1G9A");
