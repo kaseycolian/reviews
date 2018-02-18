@@ -13,26 +13,20 @@ h3{
 	font-style: italic;
 }
 
-img {
-	position: absolute;
+iframe{
+	width: 500;
+	height: 300;
 	top: 147px;
 	left: 270px;
-	display: block;
-	max-width: 450px;
-	max-height: 210px;
-	width: auto;
-	height: auto;
-	display: block;
+	position: absolute;
 }
-
-iframe{
-	    display: block;
-    margin-left: auto;
+img {
+	display: block;
+	margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    height: 420;
+ 	width: 40%;
+ 	max-height: 300px;
 }
-
 footer{
 	font-family: "Cambria", Georgia, serif;
 }

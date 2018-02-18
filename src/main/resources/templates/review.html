@@ -17,20 +17,23 @@
 			<h4
 				th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 			<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
-			<Figure>
-				<p th:each="review: ${reviews}" />
-				<img th:src="${review.imageUrl}" alt="Band logo" />
-			</Figure>
+
+			<iframe th:each="review: ${reviews}" th:src="${review.youTubeUrl}">
+			</iframe>
+
 			<br></br> <br></br> <br></br> <br></br> <br></br>
 		</Section>
-		<Article>
+		<Article th:each="review: ${reviews}">
 			<h2>Behind the music:</h2>
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 			<em> <sub><a th:each="review: ${reviews}"
 					th:href="${review.footnoteUrl}">[1] Reference Link</a></sub>
 			</em><br></br> <br></br>
-			<iframe width="600" height="355" th:each="review: ${reviews}"
-				th:src="${review.youTubeUrl}"> </iframe>
+
+			<p th:each="review: ${reviews}" />
+			<img th:src="${review.imageUrl}" alt="Band logo" />
+
+
 		</Article>
 	</div>
 </body>
