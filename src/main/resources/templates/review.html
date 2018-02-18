@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<!-- <meta charset="ISO-8859-1"> -->
-<title>Artist</title>
+<style>
+body{ background-color: #C4C4C4;}
 
+</style>
+<title th:each="review: ${reviews}" th:text="${review.title}" /> 
 </head>
 
 <body>
@@ -13,9 +16,8 @@
 	</header>
 
 	<div th:each="review: ${reviews}">
-		<h2 th:text="'Genre: ' + ${review.category}" />
-		<h4
-			th:text="'Year of first studio release: ' + ${review.firstRelease}" />
+		<em><h2 th:text="'Genre: ' + ${review.category}" /></em>
+		<h4 th:text="'Year of first studio release: ' + ${review.firstRelease}" />
 		<h4 th:text="'Year of last studio release: ' + ${review.lastRelease}" />
 		<br></br>
 		<Section>
@@ -23,11 +25,14 @@
 			<p th:each="review: ${reviews}" th:text="${review.content}" />
 		</Section>
 
-
-		<img src="${review.imageUrl}" /> <a
-			href="http://localhost:8080/reviews">Back to home</a>
+		<img src="${review.imageUrl}" /> 
+		
 
 	</div>
 
 </body>
+<footer>
+	<p th:each="review: ${reviews}" th:text="${review.footnoteUrl}" />
+	<a href="http://localhost:8080/reviews">Back to home</a>
+</footer>
 </html>

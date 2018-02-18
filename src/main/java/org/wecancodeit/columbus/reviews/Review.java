@@ -6,16 +6,19 @@ public class Review {
 	private String imageUrl;
 	private String category;
 	private String content;
+	private String footnoteUrl;
+
 	private String firstRelease;
 	private String lastRelease;
 
-	public Review(Long productId, String title, String imageUrl, String category, String content, String firstRelease,
+	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl, String firstRelease,
 			String lastRelease) {
 		this.productId = productId;
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.content = content;
+		this.footnoteUrl = footnoteUrl;
 		this.firstRelease = firstRelease;
 		this.lastRelease = lastRelease;
 	}
@@ -42,6 +45,10 @@ public class Review {
 
 	public String getContent() {
 		return content;
+	}
+
+	public String getFootnoteUrl() {
+		return footnoteUrl;
 	}
 
 	public String getFirstRelease() {

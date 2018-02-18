@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+
 public class ReviewController {
 	
 	@Resource

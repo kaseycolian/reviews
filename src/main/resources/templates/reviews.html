@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<mvc:resources mapping="/resources/**" location="/resources/" />
 
 <head>
 <style>
 body {
-	background-color: #9B9B9B;
+	background-color: #4A4A4A;
+}
+header {
+color: #1287A8;
 }
 
 li {
-	color: #671759;
+	color: #DB1291;
 }
 
 /*unvisited link*/
@@ -27,7 +30,7 @@ a:hover {
 </style>
 </head>
 
-<title>Music Reviews/</title>
+<title>Music Reviews</title>
 
 
 <body>
@@ -36,12 +39,17 @@ a:hover {
 	</header>
 
 
-	<ul th:each="review: ${reviews}">
-		<li><a th:href="@{/review(id=${review.productId})}"
-			th:text="${review.title}" /></li>
-	</ul>
-	<img src="./static/images/piano.jpeg" alt="Piano Keys" />
+	<h3><ul th:each="review: ${reviews}">
+		<em><li><a th:href="@{/review(id=${review.productId})}"
+			th:text="${review.title}" /></li></em>
+	</ul></h3>
+	<div>
 
+		<img th:src="@{./static/piano.jpeg}"
+			src="../static/piano.jpeg"
+			alt="Responsive image" /> <img
+			src="../static/piano.jpeg" alt="Piano Keys" />
+	</div>
 
 </body>
 </html>
