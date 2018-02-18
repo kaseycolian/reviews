@@ -7,12 +7,13 @@ public class Review {
 	private String category;
 	private String content;
 	private String footnoteUrl;
-
 	private String firstRelease;
 	private String lastRelease;
+	private String youTubeUrl;
+
 
 	public Review(Long productId, String title, String imageUrl, String category, String content, String footnoteUrl,
-			String firstRelease, String lastRelease) {
+			String firstRelease, String lastRelease, String youTubeUrl) {
 		this.productId = productId;
 		this.title = title;
 		this.imageUrl = imageUrl;
@@ -21,6 +22,7 @@ public class Review {
 		this.footnoteUrl = footnoteUrl;
 		this.firstRelease = firstRelease;
 		this.lastRelease = lastRelease;
+		this.youTubeUrl = youTubeUrl;
 	}
 
 	public String getLastRelease() {
@@ -55,4 +57,7 @@ public class Review {
 		return firstRelease;
 	}
 
+	public String getYouTubeUrl() {
+		return youTubeUrl;
+	}
 }

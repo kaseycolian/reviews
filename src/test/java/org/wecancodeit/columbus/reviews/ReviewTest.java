@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class ReviewTest {
 
-	Review underTest = new Review(1234L, "pen", "www.url.com", "pointy", "ink", "gelpen", "stuff", "meow");
+	Review underTest = new Review(1234L, "pen", "www.url.com", "pointy", "ink", "gelpen", "stuff", "meow", "vid");
 
 	@Test
 	public void shouldReturnId() {
@@ -56,5 +56,11 @@ public class ReviewTest {
 	public void shouldReturnFootnoteUrl() {
 		String footnote = underTest.getFootnoteUrl();
 		assertThat(footnote, is("gelpen"));
+	}
+	
+	@Test
+	public void shouldReturnYouTubeVideo() {
+		String tube = underTest.getYouTubeUrl();
+		assertThat(tube, is("vid"));
 	}
 }

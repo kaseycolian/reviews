@@ -12,10 +12,10 @@ public class ReviewRepositoryTest {
 
 	private long firstReviewId = 123;
 	private Review firstReview = new Review(firstReviewId, "g2", "www.g2.com", "black pen", "inkers", "gelly",
-			"pretzel", "bag");
+			"pretzel", "bag", "you");
 	private long secondReviewId = 456;
 	private Review secondReview = new Review(secondReviewId, "g6", "www.g6.com", "blue", "fly", "likeaG6", "tab",
-			"phone");
+			"phone", "tube");
 
 	@Test
 	public void shouldFindOneReview() {
