@@ -60,7 +60,6 @@ public class ReviewControllerTest {
 
 	@Test
 	public void shouldReturNameOfAllReviewsTemplate() {
-		Collection<Review> allReviews = Arrays.asList(oneReview, twoReview);
 		String reviewAllTemps = underTest.getAllReviews(model);
 		assertThat(reviewAllTemps, is("reviews"));
 	}
