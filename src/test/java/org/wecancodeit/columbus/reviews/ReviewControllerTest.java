@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 public class ReviewControllerTest {
+
 	private Long productId = 42L;
 
 	@InjectMocks
@@ -27,10 +28,10 @@ public class ReviewControllerTest {
 	private Model model;
 
 	@Mock
-	private Review review;
+	private Review oneReview;
 
 	@Mock
-	private Review anotherReview;
+	private Review twoReview;
 
 	@Before
 	public void setup() {
@@ -39,11 +40,29 @@ public class ReviewControllerTest {
 
 	@Test
 	public void shouldGetASingleReviewModel() {
-		when(repository.findOne(productId)).thenReturn(review);
+		when(repository.findOne(productId)).thenReturn(oneReview);
 		underTest.getAReview(productId, model);
 	}
 
 	@Test
-	public void shouldGetAllReviews() {
+	public void shouldReturnSingleReviewOnlyTemplate() {
+		String reviewTemp = underTest.getAReview(productId, model);
+		assertThat(reviewTemp, is("review"));
 	}
+
+	@Test
+	public void shouldAllAllReviewsToModel() {
+		Collection<Review> allReviews = Arrays.asList(oneReview, twoReview);
+		when(repository.findAll()).thenReturn(allReviews);
+		underTest.getAllReviews(model);
+		verify(model).addAttribute("reviews", allReviews);
+	}
+
+	@Test
+	public void shouldReturNameOfAllReviewsTemplate() {
+		Collection<Review> allReviews = Arrays.asList(oneReview, twoReview);
+		String reviewAllTemps = underTest.getAllReviews(model);
+		assertThat(reviewAllTemps, is("reviews"));
+	}
+
 }
