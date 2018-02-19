@@ -1,28 +1,26 @@
-header{
+header {
 	font-family: "Constantia", serif;
 	color: #262D40;
 	font-size: 120%;
 }
 
 body {
-	background-color: #BABABA;
-	font-family: "Calibri", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	background-color: #ADADAE;
+	font-family: "Calibri", Candara, Segoe, "Segoe UI", Optima, Arial,
+		sans-serif;
 }
 
-h3{
+h3 {
 	font-style: italic;
 }
 
-iframe{
+iframe {
 	position: absolute;
 	display: block;
 	top: 130px;
 	left: 270px;
-
-	
-	
-	
 }
+
 img {
 	display: block;
 	margin-left: auto;
@@ -30,17 +28,18 @@ img {
 	width: 35%;
 	max-height: 300px;
 }
-footer{
+
+footer {
 	font-family: "Cambria", Georgia, serif;
 }
 
 /*unvisited link*/
 a:link {
-	color: white;
+	color: #136183;
 }
 /* visited link*/
 a:visited {
-	color:  #1287A8;
+	color: #062D79;
 }
 /* mouse over link*/
 a:hover {

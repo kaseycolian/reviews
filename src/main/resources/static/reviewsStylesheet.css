@@ -1,21 +1,16 @@
 h1 {
-	font-size: 233%;
-}
-
-header {
 	font-family: "DejaVu", serif;
-	color: #9399AB;
+	color: white;
 }
 
 body {
 	background-color: #4A4A4A;
 	font-family: "Calibri", Candara, Segoe, "Segoe UI", Optima, Arial,
-	sans-serif;
-	color: #1287A8;
+		sans-serif;
 }
 
 li {
-	color: #DB1291;
+	color: #031A2E;
 }
 
 img {
@@ -27,13 +22,13 @@ img {
 }
 /*unvisited link*/
 a:link {
-	color: white;
+	color: #141420;
 }
 /* visited link*/
 a:visited {
-	color: #7A89A6;
+	color: #9EABB0;
 }
 /* mouse over link*/
 a:hover {
-	color: #DB1291;
+	color: #A10071;
 }

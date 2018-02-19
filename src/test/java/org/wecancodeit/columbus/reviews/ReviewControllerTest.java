@@ -6,8 +6,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 public class ReviewControllerTest {
+	private Long productId = 42L;
 
 	@InjectMocks
 	private ReviewController underTest;
@@ -31,7 +39,8 @@ public class ReviewControllerTest {
 
 	@Test
 	public void shouldGetASingleReviewModel() {
-
+		when(repository.findOne(productId)).thenReturn(review);
+		underTest.getAReview(productId, model);
 	}
 
 	@Test
